@@ -1,7 +1,7 @@
 import { getDocumentContent } from "@/lib/docs";
 import Link from "next/link";
 
-import React from "react";
+
 
 const ContentDisplay = async ({ id }) => {
     const documentContent = await getDocumentContent(id);
@@ -10,14 +10,14 @@ const ContentDisplay = async ({ id }) => {
         <article className="prose dark:prose-invert">
             <h1>{documentContent.title}</h1>
             <div>
-                <span>Published On: {documentContent.date}</span> by{" "}
+                <span>Published On: {documentContent.date}</span> by
                 <Link href={`/author/${documentContent.author}`}>
                     <p>{documentContent.author}</p>
-                </Link>{" "}
-                under the{" "}
+                </Link>
+                under the
                 <Link href={`/category/${documentContent.category}`}>
                     <p>{documentContent.category}</p>
-                </Link>{" "}
+                </Link>
                 category.
             </div>
             <div className="flex gap-2">
@@ -32,12 +32,12 @@ const ContentDisplay = async ({ id }) => {
                         </Link>
                     ))}
             </div>
-            {/* <div
+            <div
                 className="lead"
                 dangerouslySetInnerHTML={{
                     __html: documentContent.contentHtml,
                 }}
-            /> */}
+            />
         </article>
     );
 };
