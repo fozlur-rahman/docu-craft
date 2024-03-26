@@ -1,5 +1,6 @@
 import { getDocumentContent } from "@/lib/docs";
 import Link from "next/link";
+
 import React from "react";
 
 const ContentDisplay = async ({ id }) => {
