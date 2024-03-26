@@ -12,11 +12,10 @@ const Landing = () => {
                             </h1>
 
                             <p className="mt-6 text-base leading-7 text-slate-700">
-                                It doesn't matter if you have an API if nobody
-                                knows how to use it. Teach people the ins and
-                                outs of OAuth 2.0 and JWTs in style with
-                                Protocol, a beautiful API documentation
-                                template.
+                                It matter if you have an API if nobody knows how
+                                to use it. Teach people the ins and outs of
+                                OAuth 2.0 and JWTs in style with Protocol, a
+                                beautiful API documentation template.
                             </p>
 
                             <div className="mt-10 flex flex-wrap gap-4">
