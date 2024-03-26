@@ -1,7 +1,6 @@
 import { getDocumentContent } from "@/lib/docs";
 import Link from "next/link";
 import React from "react";
-import Tag from "./Tag";
 
 const ContentDisplay = async ({ id }) => {
     const documentContent = await getDocumentContent(id);
@@ -15,14 +14,22 @@ const ContentDisplay = async ({ id }) => {
                     {documentContent.author}
                 </Link>{" "}
                 under the{" "}
-                <Link href={`/categories/${documentContent.category}`}>
+                <Link href={`/category/${documentContent.category}`}>
                     {documentContent.category}
                 </Link>{" "}
                 category.
             </div>
-            <div className="flex gap-5">
+            <div className="flex gap-2">
                 {documentContent.tags &&
-                    documentContent.tags.map((tag) => <p key={tag}>{tag}</p>)}
+                    documentContent.tags.map((tag) => (
+                        <Link
+                            key={tag}
+                            href={`/tags/${tag}`}
+                            className="  mt-0 mb-0 bg-sky-300 px-2 rounded-full"
+                        >
+                            {tag}
+                        </Link>
+                    ))}
             </div>
             <div
                 className="lead"
